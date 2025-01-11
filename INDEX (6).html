@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            border: 5px solid #080808;
+        }
+        input[type=text]
+        {
+            width:98%;
+            
+        }
+       
+        .container
+        {
+      text-align: center;
+      margin:5px;
+      background-color: rgb(223, 219, 20);
+        }
+.logo
+{
+    width:60%;
+
+}
+@media screen and (max-width:350px)
+ {
+    body
+    {
+    background-color:rgb(197, 51, 83) ;
+ 
+    }
+}
+.btn1
+{
+    background-color: #09b3e7;
+    color:rgb(10, 10, 10);
+    padding:20px 20px;
+    margin:25px 0;
+    border: 20px;
+    width:100%;
+    cursor: Pointer;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.btn1:hover{
+    opacity: 0.5;
+}
+    </style>
+</head>
+<body>
+   
+    <form>
+        
+        <div class="container">
+            <h2>LOGIN</h2>
+            <img height="250px" class="logo"src="" alt="notfound" class="img">
+        </div>
+        <div class="formcontainer">
+            <label for="uname"><b>USERNAME</b></label>
+            <input type="text" placeholder="Enter user name" name="username" required>
+            <label for="Id"><b>USER ID</b></label>
+            <input type="text" placeholder="Enter user-id" name="user id" required>
+            <label for="Pass"><b>PASSWORD</b></label>
+            <input type="text" placeholder="Enter password" name="password" required>
+         <button class="btn1" type="submit">Login</button>
+     </div>
+     <footer style="text-align: center;"> www.xyz.com</footer>
+    </form>
+</body>
+</html>
