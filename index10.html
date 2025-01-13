@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script src="form.js"></script>
+    <style>
+        body {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #292416;
+            padding: 50px;
+        }
+        .form-container {
+            background: rgb(233, 224, 224);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #0b0909;
+            border-radius: 4px;
+        }
+        a {
+            background-color: #5cb8a1;
+            color: rgb(9, 7, 7);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        a :hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+        <header class="text-center" style="text-align: center;" >
+         <p class="display-6">REGISTRATION FORM</p>
+        </header>
+    </h1>
+    </div>
+
+<div class="form-container">
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="username">USERNAME:</label>
+            <input type="text" id="username" name="username" required placeholder="ENTER YOUR USERNAME">
+        </div>
+        <div class="form-group">
+            <label for="email">E-MAIL:</label>
+            <input type="email" id="email" name="email" required placeholder="ENTER YOUR EMAIL">
+        </div>
+        <div class="form-group">
+            <label for="password">PASSWORD:</label>
+            <input type="password" id="password" name="password" required placeholder="ENTER THE PASSWORD">
+            <h5>Password must be atleast 8 characters long and include at least one number and one special character.</h5>
+        </div>
+        <div class="form-group">
+            <label for="address">ADDRESS:</label>
+            <textarea id="address" name="address" required placeholder="ENTER YOUR ADDRESS"></textarea >
+                
+        </div>
+        <div class="form-group">
+            <label for="contact">CONTACT NO:</label>
+            <input type="text" id="contact" name="contact" placeholder="ENTER YOUR MOBILENO" required pattern="\d{10}" title="Please enter a valid 10-digit contact number.">
+        </div>
+       <!-- <input type="SUBMIT" >!-->
+      <!-- <a href="https://Nagoor78.github.io/FSD-ass/"> SUBMIT</a>--> 
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        const password = document.getElementById('password').value;
+        const passwordPattern = /^(?=.[0-9])(?=.[!@#$%^&])[A-Za-z\d@$!%?&]{8,}$/;
+
+        if (!passwordPattern.test(password)) {
+            alert("Password must be atleast 8 characters long and include at least one number and one special character.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+</body>
+</html>
