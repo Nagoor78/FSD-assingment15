@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade</title>
+</head>
+<body>
+    <script>
+   var Name=(prompt(""));
+   var Id=(prompt(""));
+   var Tamil=parseInt(prompt(""));
+   var Physics=parseInt(prompt(""));
+   var English=parseInt(prompt(""));
+   var Chemistry=parseInt(prompt(""));
+   var Maths=parseInt(prompt(""));
+   var Biology=parseInt(prompt(""));
+   var total= Tamil+Physics+English+Chemistry+Maths+Biology;
+   var percentage=total*100/600;
+   document.write("Name:" +Name+ "<br>");
+   document.write("ID:" +Id+ "<br>");
+   document.write("Tamil mark:" +Tamil+ "<br>");
+   document.write("Physics mark:" +Physics+ "<br>");
+   document.write("English mark:" +English+ "<br>");
+   document.write("Chemistry mark:" +Chemistry+ "<br>" );
+   document.write("Maths mark:" +Maths+ "<br>");
+   document.write("Biology mark:" +Biology+ "<br>");
+   document.write("Total:" +total+ "<br>");
+   document.write("Percentage:" +percentage+ "<br>");
+
+if(percentage>=90)
+{
+    document.write("Grade A");
+}
+else if(percentage>=80 && percentage<90)
+{
+    document.write("Grade B");
+}
+if(percentage>=70 && percentage<80)
+{
+    document.write("Grade C");
+}
+else if(percentage>=60 && percentage<70)
+{
+    document.write("Grade D");
+}
+if(percentage>=50 && percentage<60)
+{
+    document.write("Grade E");
+}
+else if(percentage<50)
+{
+    document.write("Fail");
+}
+</script>
+</body>
+</html>
